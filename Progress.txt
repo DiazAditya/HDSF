@@ -1,0 +1,10 @@
+Rencana awal : Membuat Website Cuaca yang bisa dihubungkan atau disambungkan dengan Data BMKG.
+
+
+Progress  
+
+Presentasi ke-1 : Sudah membuat website dengan hanya menambahkan kata-kata beserta gambar.
+
+Presentasi ke-2 : Menambahkan fitur pencarian dan sedikit memperindah desain
+
+ON GOING ...
