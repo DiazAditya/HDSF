@@ -7,4 +7,6 @@ Presentasi ke-1 : Sudah membuat website dengan hanya menambahkan kata-kata beser
 
 Presentasi ke-2 : Menambahkan fitur pencarian dan sedikit memperindah desain
 
+Mendapatkan referensi code dari web 'Boxicons' dalam web tersebut terdapat berbagai code seperti 'maps'
+
 ON GOING ...
