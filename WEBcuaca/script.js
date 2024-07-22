@@ -15,7 +15,7 @@ search.addEventListener('click', () => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
         .then(response => response.json())
         .then(json => {
-
+            
             if (json.cod === '404') {
                 container.style.height = '400px';
                 weatherBox.style.display = 'none';
@@ -58,6 +58,21 @@ search.addEventListener('click', () => {
                 default:
                     image.src = '';
             }
+
+            function getCurrentDay() {
+                const date = new Date();
+                const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+                const currentDay = days[date.getDay()];
+
+                return currentDay;
+            }
+
+            setInterval(() => {
+                const currentDay = getCurrentDay();
+
+                document.querySelector('.day').innerHTML = currentDay;
+            }, 1000);
 
             suhu.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
             deskripsi.innerHTML = `${json.weather[0].description}`;
