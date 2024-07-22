@@ -1,53 +1,33 @@
-
-* {
+*{
   margin: 0;
   padding: 0;
   border: 0;
   outline: none;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.3
-  ); /* Nilai alpha (0.5) menentukan tingkat transparansi */
-  z-index: -1;
-}
-
-body {
+body{
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("images/bg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: #06383D;
 }
-.container {
+
+.container{
   position: relative;
   width: 400px;
   height: 105px;
-  background: rgba(40, 40, 208, 0.2);
+  background: #fff;
   padding: 28px 32px;
   overflow: hidden;
   border-radius: 18px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   transition: 0.6s ease-out;
-  backdrop-filter: blur(10px) saturate(150%);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.search-box {
+.location{
   width: 100%;
   height: min-content;
   display: flex;
@@ -55,125 +35,119 @@ body {
   justify-content: space-between;
 }
 
-.search-box input {
-  background: transparent;
-  color: #0a7eb0;
+.location input{
+  color: #06383D;
   width: 80%;
   font-size: 24px;
   font-weight: 500;
   text-transform: uppercase;
-  padding: 10px 0;
-  padding-left: 55px;
-  border: 2px solid;
-  border-radius: 30px;
+  padding-left: 32px;
 }
 
-.search-box input::placeholder {
+.location input::placeholder{
   font-size: 20px;
   font-weight: 500;
-  color: #b0e0f2;
+  color: #06383D;
   text-transform: capitalize;
 }
 
-.search-box button {
+.location button{
   cursor: pointer;
   width: 50px;
   height: 50px;
-  color: rgb(12, 111, 157);
-  background: #bce1f0;
+  color: #06383D;
+  background: #dff6ff;
   border-radius: 50%;
   font-size: 22px;
   transition: 0.4s ease;
 }
 
-.search-box button:hover {
-  color: #afc3ed;
-  background: black;
+.location button:hover{
+  color: #fff;
+  background: #06383D;
 }
 
-.search-box i {
+.location i{
   position: absolute;
-  color: rgba(142, 5, 5, 0.5);
+  color: #06383D;
   font-size: 28px;
-  padding-left: 20px;
 }
 
-.weather-box {
+.weather-box{
   text-align: center;
 }
 
-.weather-box img {
-  width: 60%;
+.weather-box img{
+  width: 70%;
   margin-top: 30px;
 }
 
-.weather-box .temperature {
+.weather-box .suhu{
   position: relative;
-  color: #dff6ff;
+  color: #06383D;
   font-size: 4rem;
   font-weight: 800;
   margin-top: 30px;
   margin-left: -16px;
 }
 
-.weather-box .temperature span {
+.weather-box .suhu span{
   position: absolute;
   margin-left: 4px;
   font-size: 1.5rem;
 }
 
-.weather-box .description {
-  color: #dfdfdf;
+.weather-box .deskripsi{
+  color: #06383D;
   font-size: 22px;
   font-weight: 500;
   text-transform: capitalize;
 }
 
-.weather-details {
+.weather-details{
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
 }
 
-.weather-details .humidity,
-.weather-details .wind {
+.weather-details .humidity, .weather-details .wind{
   display: flex;
   align-items: center;
   width: 50%;
   height: 100px;
 }
 
-.weather-details .humidity {
+.weather-details .humidity{
   padding-left: 20px;
   justify-content: flex-start;
 }
 
-.weather-details .wind {
+.weather-details .wind{
   padding-right: 20px;
   justify-content: flex-end;
 }
 
-.weather-details i {
-  color: #dfdfdf;
+.weather-details i{
+  color: #06383D;
   font-size: 26px;
   margin-right: 10px;
   margin-top: 6px;
 }
 
-.weather-details span {
-  color: #dfdfdf;
+.weather-details span{
+  color: #06383D;
   font-size: 22px;
   font-weight: 500;
 }
 
-.weather-details p {
-  color: #dfdfdf;
+.weather-details p{
+  color: #06383D;
   font-size: 14px;
   font-weight: 500;
 }
 
-.not-found {
+.not-found{
   width: 100%;
   text-align: center;
   margin-top: 50px;
@@ -182,35 +156,30 @@ body {
   display: none;
 }
 
-.not-found img {
-  width: 80%;
-  height: 80%;
-  aspect-ratio: 3/2;
-  object-fit: contain;
+.not-found img{
+  width: 70%;
 }
 
-.not-found p {
-  color: #dfdfdf;
+.not-found p{
+  color: #06383D;
   font-size: 22px;
   font-weight: 500;
-  margin: 0 auto;
-  margin: 1rem 0;
+  margin-top: 12px;
 }
 
-.weather-box,
-.weather-details {
+.weather-box, .weather-details{
   scale: 0;
   opacity: 0;
 }
 
-.fadeIn {
+.fadeIn{
   animation: 0.5s fadeIn forwards;
   animation-delay: 0.5s;
 }
 
-@keyframes fadeIn {
+@keyframes fadeIn{
   to {
-    scale: 1;
-    opacity: 1;
+      scale: 1;
+      opacity: 1;
   }
 }
