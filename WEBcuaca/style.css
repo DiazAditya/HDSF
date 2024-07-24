@@ -9,10 +9,38 @@
 
 body{
   height: 100vh;
-  display: flex;
+  width: 100vw;
+  display: grid;
   align-items: center;
   justify-content: center;
-  background: #06383D;
+  animation: bgimg 20s infinite alternate linear;
+}
+@keyframes bgimg {
+  0%
+    {
+        background-image: url(assets/fall.jpeg);
+    }
+    20%
+    {
+        background-image: url(assets/rain.jpeg);
+    }
+    40%
+    {
+        background-image: url(assets/winter.jpeg);
+    }
+    60%
+    {
+        background-image: url(assets/summer.jpeg);
+    }
+    80%
+    {
+        background-image: url(assets/rain.jpeg);
+    }
+    100%
+    {
+        background-image: url(assets/fall.jpeg);
+    }
+  
 }
 
 .container{
